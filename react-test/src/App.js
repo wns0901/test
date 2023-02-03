@@ -6,13 +6,13 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:4000/get")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => setData(data.정보));
   }, []);
-
+  console.log(data);
   return (
     <div className="App">
       <header className="App-header">
-        <a className="App-link">Learn React sjs 정보 {data}</a>
+        <a className="App-link">정보 : "{data}" </a>
       </header>
     </div>
   );
